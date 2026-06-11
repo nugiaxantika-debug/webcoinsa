@@ -8,6 +8,12 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
     background-color: #f5f5f5;
     color: #333;
+    line-height: 1.6;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
 }
 
 /* Header */
@@ -18,6 +24,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .header-container {
@@ -38,6 +45,7 @@ body {
     font-weight: 700;
     color: #000;
     text-decoration: none;
+    flex-shrink: 0;
 }
 
 .search-bar {
@@ -54,6 +62,11 @@ body {
     border-radius: 20px;
     font-size: 14px;
     outline: none;
+    transition: background-color 0.2s;
+}
+
+.search-bar input:focus {
+    background-color: #e0e0e0;
 }
 
 .search-bar svg {
@@ -69,6 +82,7 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-shrink: 0;
 }
 
 .upload-btn {
@@ -81,11 +95,26 @@ body {
     display: flex;
     align-items: center;
     gap: 4px;
+    transition: color 0.2s;
+}
+
+.upload-btn:hover {
+    color: #666;
 }
 
 .notification-badge {
     position: relative;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.notification-badge svg {
+    transition: transform 0.2s;
+}
+
+.notification-badge:hover svg {
+    transform: scale(1.1);
 }
 
 .notification-badge .badge {
@@ -109,6 +138,11 @@ body {
     height: 32px;
     border-radius: 50%;
     cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
 }
 
 /* Main Content */
@@ -116,6 +150,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
+    min-height: calc(100vh - 80px);
 }
 
 .container {
@@ -126,6 +161,7 @@ body {
     background-color: #fff;
     border-radius: 8px;
     padding: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .section-header {
@@ -133,6 +169,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+    gap: 20px;
 }
 
 .section-header h1 {
@@ -145,9 +182,12 @@ body {
     text-decoration: none;
     font-size: 14px;
     cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.2s;
 }
 
 .view-history:hover {
+    color: #ff2050;
     text-decoration: underline;
 }
 
@@ -175,11 +215,13 @@ body {
     border-radius: 6px;
     font-size: 14px;
     outline: none;
-    transition: border-color 0.3s;
+    transition: all 0.3s;
 }
 
 .input-field:focus {
-    border-color: #000;
+    border-color: #ff2050;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(255, 32, 80, 0.1);
 }
 
 .input-field::placeholder {
@@ -195,6 +237,11 @@ body {
     height: 18px;
     color: #ccc;
     cursor: pointer;
+    transition: color 0.2s;
+}
+
+.info-icon:hover {
+    color: #999;
 }
 
 /* Recharge Section */
@@ -218,23 +265,27 @@ body {
     padding: 20px;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     background-color: #fff;
+    user-select: none;
 }
 
 .package:hover {
     border-color: #999;
     background-color: #fafafa;
+    transform: translateY(-2px);
 }
 
 .package.selected {
-    border-color: #000;
-    background-color: #f5f5f5;
+    border-color: #ff2050;
+    background-color: #fff5f8;
+    box-shadow: 0 4px 12px rgba(255, 32, 80, 0.15);
 }
 
 .coin-icon {
     font-size: 32px;
     margin-bottom: 10px;
+    display: block;
 }
 
 .coin-amount {
@@ -269,6 +320,7 @@ body {
 .payment-methods {
     display: flex;
     gap: 12px;
+    flex-wrap: wrap;
 }
 
 .payment-methods svg {
@@ -278,11 +330,13 @@ body {
     border-radius: 6px;
     padding: 4px;
     cursor: pointer;
-    transition: border-color 0.3s;
+    transition: all 0.3s;
+    background-color: #fff;
 }
 
 .payment-methods svg:hover {
-    border-color: #000;
+    border-color: #ff2050;
+    box-shadow: 0 2px 4px rgba(255, 32, 80, 0.1);
 }
 
 /* Total Section */
@@ -299,6 +353,7 @@ body {
 .total-label {
     font-size: 14px;
     color: #666;
+    font-weight: 500;
 }
 
 .total-amount {
@@ -319,16 +374,21 @@ body {
     color: #999;
     cursor: not-allowed;
     transition: all 0.3s;
+    margin-top: 10px;
 }
 
-.recharge-btn:not(:disabled) {
+.recharge-btn:not(:disabled),
+.recharge-btn.active {
     background-color: #ff2050;
     color: white;
     cursor: pointer;
 }
 
-.recharge-btn:not(:disabled):hover {
+.recharge-btn:not(:disabled):hover,
+.recharge-btn.active:hover {
     background-color: #e51840;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 32, 80, 0.3);
 }
 
 /* Modal */
@@ -344,6 +404,16 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .modal.show {
@@ -359,6 +429,18 @@ body {
     max-height: 90vh;
     overflow-y: auto;
     position: relative;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .modal-close {
@@ -375,6 +457,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: color 0.2s;
 }
 
 .modal-close:hover {
@@ -386,6 +469,7 @@ body {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 25px;
+    padding-right: 30px;
 }
 
 .order-detail {
@@ -400,6 +484,7 @@ body {
 .order-detail label {
     font-size: 14px;
     color: #666;
+    margin: 0;
 }
 
 .account-value {
@@ -454,6 +539,7 @@ body {
 .payment-method-header h3 {
     font-size: 16px;
     font-weight: 600;
+    margin: 0;
 }
 
 .manage-link {
@@ -462,6 +548,12 @@ body {
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
+    transition: color 0.2s;
+}
+
+.manage-link:hover {
+    color: #e51840;
+    text-decoration: underline;
 }
 
 .payment-options {
@@ -477,7 +569,12 @@ body {
     border: 2px solid #e5e5e5;
     border-radius: 8px;
     cursor: pointer;
-    transition: border-color 0.3s;
+    transition: all 0.3s;
+    background-color: #fff;
+}
+
+.payment-option:hover {
+    border-color: #ddd;
 }
 
 .payment-option input[type="radio"] {
@@ -486,6 +583,7 @@ body {
     margin-right: 15px;
     cursor: pointer;
     accent-color: #ff2050;
+    flex-shrink: 0;
 }
 
 .payment-option.selected {
@@ -517,10 +615,19 @@ body {
     margin-left: auto;
 }
 
-.card-icons img {
+.card-icon {
     width: 32px;
     height: 20px;
     border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.paypal-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #003087;
+    border-radius: 4px;
+    margin-left: auto;
 }
 
 .payment-option svg {
@@ -549,6 +656,7 @@ body {
 
 .policy-agreement label {
     margin: 0;
+    cursor: pointer;
 }
 
 .country-info {
@@ -568,11 +676,18 @@ body {
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
+    margin-top: 10px;
 }
 
 .pay-btn:hover {
     background-color: #e51840;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 32, 80, 0.3);
+}
+
+.pay-btn:active {
+    transform: translateY(0);
 }
 
 /* Processing Modal */
@@ -627,6 +742,7 @@ body {
     justify-content: center;
     min-height: 300px;
     text-align: center;
+    padding-top: 20px;
 }
 
 .success-icon {
@@ -640,12 +756,25 @@ body {
     font-size: 48px;
     color: #00c853;
     margin-bottom: 20px;
+    animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .success h2 {
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 15px;
+    padding-right: 30px;
 }
 
 .success p {
@@ -664,11 +793,13 @@ body {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 }
 
 .go-back-btn:hover {
     background-color: #e51840;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 32, 80, 0.3);
 }
 
 /* Responsive */
@@ -696,17 +827,35 @@ body {
     .modal-content {
         padding: 20px;
     }
+
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-content {
+        padding: 20px 10px;
+    }
 }
 
 @media (max-width: 480px) {
     .header-container {
         flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .logo {
+        order: 1;
     }
 
     .search-bar {
         max-width: 100%;
         order: 3;
         flex-basis: 100%;
+    }
+
+    .header-icons {
+        order: 2;
     }
 
     .packages-grid {
@@ -728,4 +877,36 @@ body {
         align-items: flex-start;
         gap: 10px;
     }
+
+    .section-header h1 {
+        font-size: 24px;
+    }
+
+    .get-coins-section {
+        padding: 15px;
+        border-radius: 0;
+    }
+
+    .modal-content {
+        padding: 15px;
+        border-radius: 8px;
+        margin: 10px;
+    }
+
+    .order-summary h2,
+    .success h2 {
+        font-size: 18px;
+        padding-right: 30px;
+    }
+
+    .pay-btn,
+    .go-back-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+/* Loading state */
+.recharge-btn:active:not(:disabled) {
+    transform: scale(0.98);
 }

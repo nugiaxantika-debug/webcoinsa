@@ -35,7 +35,7 @@
                     </svg>
                     <span class="badge">1</span>
                 </div>
-                <img src="https://via.placeholder.com/32" alt="Profile" class="profile-img">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23ff2050'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='white' font-size='18' font-weight='bold'%3EU%3C/text%3E%3C/svg%3E" alt="Profile" class="profile-img">
             </div>
         </div>
     </header>
@@ -182,10 +182,10 @@
                             <span class="card-number">*********567</span>
                         </span>
                         <div class="card-icons">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 32'%3E%3Crect fill='%23EB001B' width='48' height='32' rx='4'/%3E%3C/svg%3E" alt="Visa">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 32'%3E%3Crect fill='%23FF5F00' width='48' height='32' rx='4'/%3E%3C/svg%3E" alt="Mastercard">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 32'%3E%3Crect fill='%231434CB' width='48' height='32' rx='4'/%3E%3C/svg%3E" alt="Card">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 32'%3E%3Crect fill='%23006FCF' width='48' height='32' rx='4'/%3E%3C/svg%3E" alt="Card">
+                            <div class="card-icon" style="background-color: #EB001B;"></div>
+                            <div class="card-icon" style="background-color: #FF5F00;"></div>
+                            <div class="card-icon" style="background-color: #1434CB;"></div>
+                            <div class="card-icon" style="background-color: #006FCF;"></div>
                         </div>
                     </label>
 
@@ -194,10 +194,7 @@
                         <span class="option-content">
                             <span class="payment-type">PayPal</span>
                         </span>
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <rect width="32" height="32" rx="4" fill="#003087"/>
-                            <text x="16" y="20" text-anchor="middle" fill="white" font-size="12" font-weight="bold">P</text>
-                        </svg>
+                        <div class="paypal-icon"></div>
                     </label>
                 </div>
             </div>
@@ -238,6 +235,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
