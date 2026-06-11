@@ -3,238 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TikTok Get Coins - Top Up Coin TikTok</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>TikTok Get Coins</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
-        <div class="header-container">
-            <div class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.68v13.7a2.4 2.4 0 0 1-2.4 2.4 2.4 2.4 0 0 1-2.4-2.4 2.4 2.4 0 0 1 2.4-2.4c.34 0 .67.05.98.15V9.48a5.64 5.64 0 0 0-.98-.08 5.7 5.7 0 0 0 0 11.4 5.7 5.7 0 0 0 5.7-5.7V9.58a7.7 7.7 0 0 0 4.15 1.27v-3.16a4.7 4.7 0 0 1-.88-.07z"/>
-                </svg>
-                <span>TikTok</span>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-            </div>
-            <div class="header-icons">
-                <button class="upload-btn">+ Upload</button>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                </svg>
-                <div class="notification-badge">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-                    </svg>
-                    <span class="badge">1</span>
-                </div>
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23ff2050'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='white' font-size='18' font-weight='bold'%3EU%3C/text%3E%3C/svg%3E" alt="Profile" class="profile-img">
+        <div class="header-content">
+            <div class="logo">🎵 TikTok</div>
+            <input type="text" class="search" placeholder="Search">
+            <div class="icons">
+                <button class="btn-upload">+ Upload</button>
+                <span>📤</span>
+                <span>🔔</span>
+                <div class="avatar">👤</div>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="container">
-            <div class="get-coins-section">
-                <div class="section-header">
-                    <h1>Get Coins</h1>
-                    <a href="#" class="view-history">View transaction history</a>
-                </div>
-
-                <!-- Form Section -->
-                <div class="form-section">
-                    <div class="form-group">
-                        <label for="username">Enter username</label>
-                        <div class="input-wrapper">
-                            <input type="text" id="username" placeholder="Enter username" class="input-field">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="info-icon">
-                                <circle cx="12" cy="12" r="10"/>
-                                <text x="12" y="16" text-anchor="middle" fill="white" font-size="12">i</text>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Recharge Packages -->
-                <div class="recharge-section">
-                    <h2>Recharge</h2>
-                    <div class="packages-grid">
-                        <div class="package" data-coins="70" data-price="0.85">
-                            <div class="coin-icon">💰</div>
-                            <div class="coin-amount">70</div>
-                            <div class="coin-price">€ 0.85</div>
-                        </div>
-                        <div class="package" data-coins="350" data-price="4.15">
-                            <div class="coin-icon">💰</div>
-                            <div class="coin-amount">350</div>
-                            <div class="coin-price">€ 4.15</div>
-                        </div>
-                        <div class="package" data-coins="700" data-price="8.29">
-                            <div class="coin-icon">💰</div>
-                            <div class="coin-amount">700</div>
-                            <div class="coin-price">€ 8.29</div>
-                        </div>
-                        <div class="package" data-coins="1400" data-price="16.49">
-                            <div class="coin-icon">💰</div>
-                            <div class="coin-amount">1,400</div>
-                            <div class="coin-price">€ 16.49</div>
-                        </div>
-                        <div class="package" data-coins="3500" data-price="41.25">
-                            <div class="coin-icon">💰</div>
-                            <div class="coin-amount">3,500</div>
-                            <div class="coin-price">€ 41.25</div>
-                        </div>
-                        <div class="package" data-coins="7000" data-price="82.08">
-                            <div class="coin-icon">💰</div>
-                            <div class="coin-amount">7000</div>
-                            <div class="coin-price">€ 82.08</div>
-                        </div>
-                        <div class="package" data-coins="17500" data-price="205.19">
-                            <div class="coin-icon">💰</div>
-                            <div class="coin-amount">17,500</div>
-                            <div class="coin-price">€ 205.19</div>
-                        </div>
-                        <div class="package custom" data-coins="custom" data-price="0">
-                            <div class="coin-icon">💰</div>
-                            <div class="coin-amount">Custom</div>
-                            <div class="coin-price">Large amount supported</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Payment Methods -->
-                <div class="payment-section">
-                    <div class="payment-label">Payment method</div>
-                    <div class="payment-methods">
-                        <svg width="28" height="20" viewBox="0 0 28 20" fill="none">
-                            <!-- Mastercard -->
-                            <circle cx="8" cy="10" r="6" fill="#FF5F00"/>
-                            <circle cx="14" cy="10" r="6" fill="#EB001B"/>
-                        </svg>
-                        <svg width="28" height="20" viewBox="0 0 28 20" fill="none">
-                            <!-- Visa -->
-                            <path d="M4 2h20v16H4z" fill="#1434CB"/>
-                        </svg>
-                        <svg width="28" height="20" viewBox="0 0 28 20" fill="none">
-                            <!-- Apple Pay -->
-                            <path d="M4 2h20v16H4z" fill="#000"/>
-                        </svg>
-                        <svg width="28" height="20" viewBox="0 0 28 20" fill="none">
-                            <!-- PayPal -->
-                            <path d="M4 2h20v16H4z" fill="#003087"/>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Total -->
-                <div class="total-section">
-                    <div class="total-label">Total</div>
-                    <div class="total-amount" id="totalAmount">€ 0</div>
-                </div>
-
-                <!-- Recharge Button -->
-                <button class="recharge-btn" id="rechargeBtn">Recharge</button>
+    <main class="container">
+        <div class="coins-section">
+            <div class="title-row">
+                <h1>Get Coins</h1>
+                <a href="#">View transaction history</a>
             </div>
+
+            <div class="input-group">
+                <label>Enter username</label>
+                <input type="text" id="usernameInput" placeholder="Enter username" class="input-field">
+            </div>
+
+            <div class="recharge-section">
+                <h2>Recharge</h2>
+                <div class="coins-grid">
+                    <div class="coin-card" data-coins="70" data-price="0.85">
+                        <span class="coin-icon">💰</span>
+                        <p class="coin-amount">70</p>
+                        <p class="coin-price">€ 0.85</p>
+                    </div>
+                    <div class="coin-card" data-coins="350" data-price="4.15">
+                        <span class="coin-icon">💰</span>
+                        <p class="coin-amount">350</p>
+                        <p class="coin-price">€ 4.15</p>
+                    </div>
+                    <div class="coin-card" data-coins="700" data-price="8.29">
+                        <span class="coin-icon">💰</span>
+                        <p class="coin-amount">700</p>
+                        <p class="coin-price">€ 8.29</p>
+                    </div>
+                    <div class="coin-card" data-coins="1400" data-price="16.49">
+                        <span class="coin-icon">💰</span>
+                        <p class="coin-amount">1,400</p>
+                        <p class="coin-price">€ 16.49</p>
+                    </div>
+                    <div class="coin-card" data-coins="3500" data-price="41.25">
+                        <span class="coin-icon">💰</span>
+                        <p class="coin-amount">3,500</p>
+                        <p class="coin-price">€ 41.25</p>
+                    </div>
+                    <div class="coin-card" data-coins="7000" data-price="82.08">
+                        <span class="coin-icon">💰</span>
+                        <p class="coin-amount">7,000</p>
+                        <p class="coin-price">€ 82.08</p>
+                    </div>
+                    <div class="coin-card" data-coins="17500" data-price="205.19">
+                        <span class="coin-icon">💰</span>
+                        <p class="coin-amount">17,500</p>
+                        <p class="coin-price">€ 205.19</p>
+                    </div>
+                    <div class="coin-card custom" data-coins="custom" data-price="0">
+                        <span class="coin-icon">💰</span>
+                        <p class="coin-amount">Custom</p>
+                        <p class="coin-price">Large amount</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-method">
+                <p>Payment method</p>
+                <div class="payment-icons">
+                    <div class="payment-icon">💳</div>
+                    <div class="payment-icon">💳</div>
+                    <div class="payment-icon">💳</div>
+                    <div class="payment-icon">💳</div>
+                </div>
+            </div>
+
+            <div class="total-row">
+                <span>Total</span>
+                <span id="totalPrice" class="total-amount">€ 0</span>
+            </div>
+
+            <button class="btn-recharge" id="rechargeBtn" disabled>Recharge</button>
         </div>
     </main>
 
-    <!-- Order Summary Modal -->
-    <div class="modal" id="orderModal">
-        <div class="modal-content order-summary">
-            <button class="modal-close" onclick="closeModal('orderModal')">&times;</button>
+    <!-- Modal Order Summary -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOrderModal()">&times;</span>
             <h2>Order summary</h2>
             
-            <div class="order-detail">
-                <label>Account</label>
-                <span class="account-value" id="orderAccount">user6</span>
+            <div class="order-account">
+                <p>Account</p>
+                <p id="orderUsername" class="username">user6</p>
             </div>
 
-            <div class="order-items">
+            <div class="order-box">
                 <div class="order-item">
-                    <span id="orderCoins">3,500 Coins</span>
-                    <span id="orderPrice" class="price">€ 41.25</span>
+                    <span id="orderCoinsText">3,500 Coins</span>
+                    <span id="orderPrice">€ 41.25</span>
                 </div>
                 <div class="order-total">
                     <span>Total</span>
-                    <span id="orderTotal" class="price">€ 41.25</span>
+                    <span id="orderTotalPrice">€ 41.25</span>
                 </div>
             </div>
 
-            <div class="payment-method-section">
-                <div class="payment-method-header">
+            <div class="payment-selection">
+                <div class="payment-header">
                     <h3>Select a payment method</h3>
-                    <a href="#" class="manage-link">Manage</a>
+                    <a href="#">Manage</a>
                 </div>
 
-                <div class="payment-options">
-                    <label class="payment-option selected">
-                        <input type="radio" name="payment" value="card" checked>
-                        <span class="option-content">
-                            <span class="payment-type">Credit / debit card</span>
-                            <span class="card-number">*********567</span>
-                        </span>
-                        <div class="card-icons">
-                            <div class="card-icon" style="background-color: #EB001B;"></div>
-                            <div class="card-icon" style="background-color: #FF5F00;"></div>
-                            <div class="card-icon" style="background-color: #1434CB;"></div>
-                            <div class="card-icon" style="background-color: #006FCF;"></div>
-                        </div>
-                    </label>
+                <label class="payment-option selected">
+                    <input type="radio" name="payment" value="card" checked>
+                    <span class="payment-info">
+                        <span class="payment-name">Credit / debit card</span>
+                        <span class="payment-detail">*********567</span>
+                    </span>
+                    <div class="card-brands">💳 💳 💳 💳</div>
+                </label>
 
-                    <label class="payment-option">
-                        <input type="radio" name="payment" value="paypal">
-                        <span class="option-content">
-                            <span class="payment-type">PayPal</span>
-                        </span>
-                        <div class="paypal-icon"></div>
-                    </label>
-                </div>
-            </div>
-
-            <div class="policy-agreement">
-                <input type="checkbox" id="policyCheckbox" checked>
-                <label for="policyCheckbox">
-                    By ticking the box, I agree to the <strong>Coins Policy</strong> and request the immediate credit of Coins to my account. I acknowledge that I will lose my right of withdrawal once I have used the Coins, at which point the contract has been fully performed.
+                <label class="payment-option">
+                    <input type="radio" name="payment" value="paypal">
+                    <span class="payment-info">
+                        <span class="payment-name">PayPal</span>
+                    </span>
+                    <span class="paypal-logo">P</span>
                 </label>
             </div>
 
-            <div class="country-info">
-                By confirming this purchase, you confirm that you live in <strong>France</strong>
-            </div>
+            <label class="checkbox">
+                <input type="checkbox" id="policyCheck" checked>
+                <span>By ticking the box, I agree to the <strong>Coins Policy</strong> and request the immediate credit of Coins to my account.</span>
+            </label>
 
-            <button class="pay-btn" onclick="processPayment()">Pay now</button>
+            <p class="country-text">By confirming this purchase, you confirm that you live in <strong>France</strong></p>
+
+            <button class="btn-pay" onclick="processPayment()">Pay now</button>
         </div>
     </div>
 
-    <!-- Processing Payment Modal -->
-    <div class="modal" id="processingModal">
-        <div class="modal-content processing">
-            <div class="processing-spinner"></div>
+    <!-- Modal Processing -->
+    <div id="processingModal" class="modal">
+        <div class="modal-content processing-modal">
+            <div class="spinner"></div>
             <h2>Processing your payment</h2>
             <p>This could take a few seconds</p>
-            <div class="countdown" id="countdown">00:59</div>
+            <div class="timer" id="timer">00:59</div>
         </div>
     </div>
 
-    <!-- Payment Success Modal -->
-    <div class="modal" id="successModal">
-        <div class="modal-content success">
-            <button class="modal-close" onclick="closeModal('successModal')">&times;</button>
+    <!-- Modal Success -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <span class="close" onclick="closeSuccessModal()">&times;</span>
             <div class="success-icon">✓</div>
             <h2>Payment completed</h2>
-            <p id="successMessage">You have recharged 3,500 Coins. You can use Coins to send Virtual Gifts.</p>
-            <button class="go-back-btn" onclick="goBack()">Go Back</button>
+            <p id="successText">You have recharged 3,500 Coins. You can use Coins to send Virtual Gifts.</p>
+            <button class="btn-back" onclick="goBack()">Go Back</button>
         </div>
     </div>
 
-    <script src="script.js" defer></script>
+    <script src="app.js"></script>
 </body>
 </html>
